@@ -1,8 +1,9 @@
 'use strict';
 
+var binaries = require('ffmpeg-binaries');
 var Ffmpeg = require('fluent-ffmpeg');
 
-Ffmpeg.setFfmpegPath(__dirname + '/node_modules/.bin/ffmpeg');
+Ffmpeg.setFfmpegPath(binaries.ffmpegPath());
 
 exports.http = (request, response) => {
   response
