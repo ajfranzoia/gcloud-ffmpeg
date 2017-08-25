@@ -14,6 +14,13 @@ exports.http = (request, response) => {
     (new Ffmpeg(__dirname + '/eagle.mp3'))
       .audioBitrate('128k')
       .output(response, { end:true })
+      .on('end', () => {
+        console.log('Finished processing');
+      })
+      .on('error', (err, stdout, stderr) => {
+        console.log('Cannot process video: ' + err.message);
+        console.log(stdout, stderr);
+      })
       .run();
 };
 
