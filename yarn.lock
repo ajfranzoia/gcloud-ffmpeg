@@ -2,6 +2,36 @@
 # yarn lockfile v1
 
 
+"@ffmpeg-installer/darwin-x64@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@ffmpeg-installer/darwin-x64/-/darwin-x64-4.0.3.tgz#654e68cc48b8c72c39a771fdf800a42c184dcad5"
+
+"@ffmpeg-installer/ffmpeg@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@ffmpeg-installer/ffmpeg/-/ffmpeg-1.0.12.tgz#4d06b1b5a13135c5bb700d8157665965281e50c0"
+  optionalDependencies:
+    "@ffmpeg-installer/darwin-x64" "4.0.3"
+    "@ffmpeg-installer/linux-ia32" "4.0.2"
+    "@ffmpeg-installer/linux-x64" "4.0.2"
+    "@ffmpeg-installer/win32-ia32" "4.0.2"
+    "@ffmpeg-installer/win32-x64" "4.0.1"
+
+"@ffmpeg-installer/linux-ia32@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@ffmpeg-installer/linux-ia32/-/linux-ia32-4.0.2.tgz#1d0234ab6ea9d73f28c1d4c062459472ada49a89"
+
+"@ffmpeg-installer/linux-x64@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@ffmpeg-installer/linux-x64/-/linux-x64-4.0.2.tgz#4ade119e38e78909b17c5fbbc8a262e4e89ecda5"
+
+"@ffmpeg-installer/win32-ia32@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@ffmpeg-installer/win32-ia32/-/win32-ia32-4.0.2.tgz#02757ef1a447d7064454fca650e0b99acde3aa0f"
+
+"@ffmpeg-installer/win32-x64@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@ffmpeg-installer/win32-x64/-/win32-x64-4.0.1.tgz#f4407b73cd4fe3f7c9caa03b20b4c8ea4c0df3ae"
+
 ajv@^4.9.1:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"

@@ -9,6 +9,7 @@
   "author": "serverless.com",
   "license": "MIT",
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.12",
     "ffmpeg-binaries": "^3.2.2-3",
     "fluent-ffmpeg": "^2.1.2",
     "serverless-google-cloudfunctions": "^1.1.0"

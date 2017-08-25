@@ -1,11 +1,12 @@
 'use strict';
 
-var binaries = require('ffmpeg-binaries');
 var Ffmpeg = require('fluent-ffmpeg');
-
-Ffmpeg.setFfmpegPath(binaries.ffmpegPath());
+const ffmpeg = require('@ffmpeg-installer/ffmpeg');
+Ffmpeg.setFfmpegPath(ffmpeg.path);
 
 exports.http = (request, response) => {
+  console.log(ffmpeg.path, ffmpeg.version);
+
   response
     .status(200)
     .set({'content-type': 'audio/mp3'});
@@ -14,6 +15,10 @@ exports.http = (request, response) => {
     (new Ffmpeg(__dirname + '/eagle.mp3'))
       .audioBitrate('128k')
       .output(response, { end:true })
+      .format('mp3')
+      .on('start', function(commandLine) {
+        console.log('Spawned Ffmpeg with command: ' + commandLine);
+      })
       .on('end', () => {
         console.log('Finished processing');
       })
